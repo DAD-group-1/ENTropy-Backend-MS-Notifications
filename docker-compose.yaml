@@ -1,0 +1,15 @@
+services:
+  mongo-db:
+    image: mongo:latest
+    container_name: entropy_notifications_mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - '${DB_PORT:-27017}:27017'
+    volumes:
+      - mongo_notifs_data:/data/db
+
+volumes:
+  mongo_notifs_data:
