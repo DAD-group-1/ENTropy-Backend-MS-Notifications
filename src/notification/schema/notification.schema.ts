@@ -1,5 +1,5 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument } from 'mongoose';
+import {Prop, Schema, SchemaFactory} from '@nestjs/mongoose';
+import {HydratedDocument} from 'mongoose';
 
 export type NotificationDocument = HydratedDocument<Notification>;
 
@@ -13,6 +13,9 @@ export class Notification {
 
   @Prop({ required: true })
   message: string;
+
+  @Prop({ default: null })
+  target_url: string;
 
   @Prop({ default: null })
   read_at: Date;
