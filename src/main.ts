@@ -29,7 +29,7 @@ async function bootstrap() {
   await app.init(); // Initialize the app without starting the HTTP server
 
   new Logger('Bootstrap').log(
-    `User microservice started on ${microserviceHost}:${microservicePort}`,
+    `Notifications microservice started on ${microserviceHost}:${microservicePort}`,
   );
 }
 bootstrap();
