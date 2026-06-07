@@ -26,7 +26,7 @@
     "update:common": "npm install @dad-group-1/backend-common@latest"
   },
   "dependencies": {
-    "@dad-group-1/backend-common": "^0.1.36",
+    "@dad-group-1/backend-common": "^0.1.59",
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.4",
     "@nestjs/core": "^11.0.1",
