@@ -1,17 +1,17 @@
-import { HttpStatus, Injectable, Logger } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { isValidObjectId, Model } from 'mongoose';
-import { RpcException } from '@nestjs/microservices';
+import {HttpStatus, Injectable, Logger} from '@nestjs/common';
+import {InjectModel} from '@nestjs/mongoose';
+import {isValidObjectId, Model} from 'mongoose';
+import {RpcException} from '@nestjs/microservices';
 import {
-  CreateNotificationDto,
-  GetNotificationListResponseDto,
-  GetNotificationResponseDto,
-  PaginationQueryDto,
-  SearchPaginationQueryDto,
-  UpdateNotificationDto,
+    CreateNotificationDto,
+    GetNotificationListResponseDto,
+    GetNotificationResponseDto,
+    PaginationQueryDto,
+    SearchPaginationQueryDto,
+    UpdateNotificationDto,
 } from '@dad-group-1/backend-common';
-import { Notification } from './schema/notification.schema';
-import { plainToInstance } from 'class-transformer';
+import {Notification} from './schema/notification.schema';
+import {plainToInstance} from 'class-transformer';
 
 @Injectable()
 export class NotificationService {
@@ -115,7 +115,7 @@ export class NotificationService {
 
     const updated = await this.notificationModel
       .findByIdAndUpdate(id, updateData, {
-        new: true,
+        returnDocument: 'after',
       })
       .exec();
 
