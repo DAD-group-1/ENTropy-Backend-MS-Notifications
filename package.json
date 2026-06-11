@@ -36,6 +36,8 @@
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/swagger": "^11.4.4",
     "@nestjs/typeorm": "^11.0.1",
+    "amqp-connection-manager": "^5.0.0",
+    "amqplib": "^2.0.1",
     "class-transformer": "^0.5.1",
     "migrate-mongo": "^14.0.7",
     "mongodb": "^7.2.0",
